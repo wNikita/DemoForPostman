@@ -11,13 +11,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private static final AtomicInteger counter = new AtomicInteger();
+//    private static final AtomicInteger counter = new AtomicInteger();
     static List<User> users = new ArrayList<User>(
             Arrays.asList(
-                    new User(counter.incrementAndGet(), "Daenerys Targaryen"),
-                    new User(counter.incrementAndGet(), "John Snow"),
-                    new User(counter.incrementAndGet(), "Arya Stark"),
-                    new User(counter.incrementAndGet(), "Cersei Baratheon")));
+                    new User(1, "Daenerys Targaryen"),
+                    new User(2, "John Snow"),
+                    new User(3, "Arya Stark"),
+                    new User(4, "Cersei Baratheon")));
 
     @Override
     public List<User> getAll() {
@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void create(User user) {
-        user.setId(counter.incrementAndGet());
+        user.setId(8);
         users.add(user);
     }
 
