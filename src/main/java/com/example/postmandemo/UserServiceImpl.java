@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
             Arrays.asList(
                     new User(counter.incrementAndGet(), "Daenerys Targaryen"),
                     new User(counter.incrementAndGet(), "John Snow"),
-                    new User(counter.incrementAndGet(), "Arya Stark"),
+                    new User(counter.incrementAndGet(), "Aarya Stark"),
                     new User(counter.incrementAndGet(), "Cersei Baratheon")));
 
     @Override
