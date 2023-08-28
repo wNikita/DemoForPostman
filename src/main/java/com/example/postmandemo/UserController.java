@@ -38,9 +38,9 @@ public class UserController {
 
     // =========================================== Get User By ID =========================================
 
-//        @RequestMapping(value = "{id}", method = RequestMethod.GET)
+    //        @RequestMapping(value = "{id}", method = RequestMethod.GET)
 //    @GetMapping(value = "{id}")
-@GetMapping(value = "{id}")
+    @GetMapping(value = "{id}")
     public ResponseEntity<User> get(@PathVariable("id") int id) {
         LOG.info("getting user with id: {}", id);
         User user = userService.findById(id);
