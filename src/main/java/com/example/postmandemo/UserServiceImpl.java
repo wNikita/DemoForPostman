@@ -46,9 +46,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void create(User user) {
-        user.setId(user.getId());
+        user.setId(counter.incrementAndGet());
         users.add(user);
     }
+
 
     @Override
     public void update(User user) {
