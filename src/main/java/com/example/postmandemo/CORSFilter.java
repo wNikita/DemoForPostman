@@ -23,3 +23,11 @@ public class CORSFilter extends OncePerRequestFilter {
         chain.doFilter(req, res);
     }
 }
+    @Override
+    protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws ServletException, IOException {
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
+        res.setHeader("Access-Control-Allow-Headers", "*");
+        res.setHeader("Access-Control-Max-Age", "3600");
+        chain.doFilter(req, res);
+    }
